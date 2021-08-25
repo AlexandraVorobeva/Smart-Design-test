@@ -17,12 +17,12 @@ very high performance, minimize code duplication.
 3.Getting the difference in the exchange rate (ruble) between two dates.<br>
 
 ### APIs endpoints:<br>
-| requests | url | url parameters| description  |
-| ------- | --- | --- | --- |
-| GET | /products/all | --- | list  |
-| GET | /products/{product_id} | --- | list of currencies of the world |
-| GET | /products | --- | list of currencies of the world |
-| POST | /currency/all | --- | list of currencies of the world |
+| requests | url | description  |
+| ------- | --- | --- |
+| GET | /products/all | list of all products  |
+| GET | /products/{product_id} | finds a product in the database by id |
+| GET | /products/{product_parameter} | filter by parameter |
+| POST | /currency/all | creates a new product |
 
 
 
