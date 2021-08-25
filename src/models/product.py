@@ -6,5 +6,3 @@ class Product(BaseModel):
     name: str
     description: str
     options: dict
-
-
