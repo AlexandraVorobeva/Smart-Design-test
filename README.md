@@ -13,8 +13,10 @@ very high performance, minimize code duplication.
 
 ### Basic functionality:<br>
 1.Web REST API<br>
-2.Getting list of currencies of the world.<br>
-3.Getting the difference in the exchange rate (ruble) between two dates.<br>
+2.Getting list of all products from the database.<br>
+3.Getting information about product by id.<br>
+4.Creating new products. <br>
+5.Sorting product by name, description or any other parameters.
 
 ### APIs endpoints:<br>
 | requests | url | description  |
