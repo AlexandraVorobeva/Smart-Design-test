@@ -34,7 +34,7 @@ very high performance, minimize code duplication.
 ### Clone the repo:<br>
 
 $ git clone https://github.com/SparklingAcidity/Smart-Design-test <br>
-$ cd Smart-Design-tes<br>
+$ cd Smart-Design-test<br>
 
 ### Create virtualenv:<br>
 $ virtualenv venv<br>
