@@ -27,9 +27,6 @@ very high performance, minimize code duplication.
 | POST | /currency/all | creates a new product |
 
 
-
-
-
 ## Installation
 ### Clone the repo:<br>
 
@@ -47,8 +44,7 @@ $ pip install -r requirements.txt<br>
 $ docker run -d -p 27017:27017 mongo
 
 ### Run the sample server:<br>
-$ uvicorn app:app --reload<br>
-
+$ uvicorn src.main:app --reload <br>
 
 ### Run tests:<br>
 $ pytest<br>
