@@ -39,7 +39,6 @@ def filter_products_by_parameter(parameter, value=None):
         for product in db.product.find({"name": str(value)}):
             products.append(product)
     else:
-        # нескольуих вариантов
         for product in db.product.find({"options": {parameter: value}}):
             products.append(product)
     return regiment_products_entity(products)
