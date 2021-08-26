@@ -36,11 +36,22 @@ very high performance, minimize code duplication.
 $ git clone https://github.com/SparklingAcidity/Smart-Design-test <br>
 $ cd Smart-Design-tes<br>
 
+### Create virtualenv:<br>
+$ virtualenv venv<br>
+$ source venv/bin/activate<br>
 
-### Run in Docker
-$ docker-compose up
+### Dependency
+$ pip install -r requirements.txt<br>
+
+### Run your databese in Docker:
+$ docker run -d -p 27017:27017 mongo
+
+### Run the sample server:<br>
+$ uvicorn app:app --reload<br>
 
 
+### Run tests:<br>
+$ pytest<br>
 
 
 ### API from the browser:
