@@ -37,10 +37,10 @@ $ cd Smart-Design-test<br>
 $ virtualenv venv<br>
 $ source venv/bin/activate<br>
 
-### Dependency
+### Dependency:
 $ pip install -r requirements.txt<br>
 
-### Run your databese in Docker:
+### Run your databese on localhost in Docker:
 $ docker run -d -p 27017:27017 mongo
 
 ### Run the sample server:<br>
