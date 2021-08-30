@@ -54,6 +54,15 @@ $ pytest<br>
 You can work on the API directly in your browser.<br>
 You will see the automatic interactive API documentation (provided by Swagger UI).
 http://127.0.0.1:8000/docs <br>
+
+### Examples:<br>
+$ http://127.0.0.1:8000/products/all    list of all products <br>
+$ http://127.0.0.1:8000/products/{product_id}?id=6122270ef9fa04e0488e318b  finds a product in the database by id<br>
+$ http://127.0.0.1:8000/products/all/{product_parameter}?parameter=name  sorts all products by name <br>
+$ http://127.0.0.1:8000/products/all/{product_parameter}?parameter=name&value=Alexandra filter by name "Alexandra"<br>
+$ http://127.0.0.1:8000/products/new   creates a new product<br>
+
+
 ![Screenshot](https://github.com/SparklingAcidity/Smart-Design-test/blob/in_process/img_for_deadme/1.png) <br>
 ![Screenshot](https://github.com/SparklingAcidity/Smart-Design-test/blob/in_process/img_for_deadme/2.png) <br>
 ![Screenshot](https://github.com/SparklingAcidity/Smart-Design-test/blob/in_process/img_for_deadme/3.png) <br>
