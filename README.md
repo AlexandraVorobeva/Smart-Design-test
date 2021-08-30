@@ -23,7 +23,8 @@ very high performance, minimize code duplication.
 | ------- | --- | --- |
 | GET | /products/all | list of all products  |
 | GET | /products/{product_id} | finds a product in the database by id |
-| GET | /products/{product_parameter} | filter by parameter |
+| GET | /products/all/{product_parameter} | filter by parameter |
+| GET | /products/all/{parameter}/{parameter2} | filter by two parameters |
 | POST | /currency/all | creates a new product |
 
 
@@ -60,6 +61,7 @@ $ http://127.0.0.1:8000/products/all    list of all products <br>
 $ http://127.0.0.1:8000/products/{product_id}?id=6122270ef9fa04e0488e318b  finds a product in the database by id<br>
 $ http://127.0.0.1:8000/products/all/{product_parameter}?parameter=name  sorts all products by name <br>
 $ http://127.0.0.1:8000/products/all/{product_parameter}?parameter=name&value=Alexandra filter by name "Alexandra"<br>
+$ http://127.0.0.1:8000/products/all/Alexandra/high filter by two parameters: name "Alexandra", and option "high"
 $ http://127.0.0.1:8000/products/new   creates a new product<br>
 
 
