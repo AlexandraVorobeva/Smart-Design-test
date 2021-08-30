@@ -55,6 +55,22 @@ def filter_products_by_parameter(parameter: str, value=None):
     return regiment_products_entity(products)
 
 
+@router.get("/all/{parameter}/{parameter2}")
+def filter_products_by_two_parameters(parameter: str, parameter2: str):
+    """
+    Finds products by two parameters.
+    Parameter must be name of products or optionsdescription.
+
+    """
+    products = []
+    for product in db.product.find():
+        if parameter in product["name"] or parameter in product["options"]:
+            if parameter2 in product["name"] or parameter2 in product["options"]:
+                products.append(product)
+
+    return regiment_products_entity(products)
+
+
 @router.post("/new")
 def create_product(product: Product):
     """Creates a new product in the database"""
