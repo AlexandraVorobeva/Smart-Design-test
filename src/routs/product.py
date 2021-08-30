@@ -1,4 +1,5 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException, Query
+from typing import Optional
 from ..db import db
 from ..schemas.product import regiment_product, regiment_products_entity
 from bson import ObjectId
@@ -22,26 +23,35 @@ def find_product_by_id(id):
 
 
 @router.get("/all/{product_parameter}")
-def filter_products_by_parameter(parameter, value=None):
+def filter_products_by_parameter(parameter: str, value=None):
     """
     Finds products by parameters and value. In case you using only parameter
     all products will be sorted in alphabetical order.
 
     Parameter must be "name" or "options".
 
-    Value: any
+    Value: any string
     """
     products = []
     if not value:
-        for product in db.product.find().sort(parameter):
-            products.append(product)
+        if parameter == "name" or parameter == "options" or parameter == "description":
+            for product in db.product.find().sort(parameter):
+                products.append(product)
+        else:
+            for product in db.product.find():
+                if parameter in product["options"].keys():
+                    products.append(product)
+
     if parameter == "name":
-        for product in db.product.find({"name": str(value)}):
+        for product in db.product.find({"name": value}):
             products.append(product)
     else:
-        # нескольуих вариантов
-        for product in db.product.find({"options": {parameter: value}}):
-            products.append(product)
+        for product in db.product.find():
+            if (
+                parameter in product["options"].keys()
+                and value in product["options"].values()
+            ):
+                products.append(product)
     return regiment_products_entity(products)
 
 

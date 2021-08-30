@@ -17,7 +17,7 @@ data = [
 ]
 
 
-def test_regiment_product():
+def test_regiment_product(data):
     assert regiment_product(data[0]) == {
         "id": "61221765c8dc29d4a9ada364",
         "name": "John",
@@ -26,7 +26,7 @@ def test_regiment_product():
     }
 
 
-def test_regiment_products_entity():
+def test_regiment_products_entity(data):
     assert regiment_products_entity(data) == [
         {
             "id": "61221765c8dc29d4a9ada364",
@@ -41,4 +41,3 @@ def test_regiment_products_entity():
             "options": {},
         },
     ]
-
