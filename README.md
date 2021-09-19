@@ -1,6 +1,6 @@
 # Smart-Design-test
 ## FASTAPI CRUD application.
-REST API application for exchange rate.<br>
+REST API application.<br>
 
 ### Stack of technologies:<br>
 -Python >= 3.9<br>
